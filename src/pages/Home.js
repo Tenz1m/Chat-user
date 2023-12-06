@@ -124,7 +124,7 @@ const Home = () => {
           <>
             <div className="messages_user">
               Chat With
-              <h3>{chat.username}</h3>
+              <h3>{chat.username || chat.name || "New USer Id : " + chat.uid}</h3>
             </div>
             <div className="messages">
               {msgs.length
