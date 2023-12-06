@@ -89,10 +89,10 @@ const Profile = () => {
           </div>
         </div>
         <div className="text_container">
-          <h3>{user.name}</h3>
+          <h3>{user.username}</h3>
           <p>{user.email}</p>
           <hr />
-          <small>Joined on: {user.createdAt.toDate().toDateString()}</small>
+          {/* <small>Joined on: {user.createdAt.toDate().toDateString()}</small> */}
         </div>
       </div>
     </section>

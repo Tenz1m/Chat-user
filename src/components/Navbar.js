@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
 import { AuthContext } from "../context/auth";
 import { useHistory } from "react-router-dom";
+import UserProfile from "./UserProfile";
 
 const Navbar = () => {
   const history = useHistory();
@@ -20,8 +21,13 @@ const Navbar = () => {
   return (
     <nav>
       <h3>
-        <Link to="/">Messenger</Link>
+        <Link to="/">Community Speak Messenger</Link>
       </h3>
+
+      <div className="centered-div">
+        {user && <UserProfile user={user} />}
+      </div>
+
 
       <div>
         {user ? (

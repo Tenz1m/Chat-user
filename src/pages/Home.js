@@ -123,6 +123,7 @@ const Home = () => {
         {chat ? (
           <>
             <div className="messages_user">
+              Chat With
               <h3>{chat.username}</h3>
             </div>
             <div className="messages">
