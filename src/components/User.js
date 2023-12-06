@@ -24,7 +24,7 @@ const User = ({ user1, user, selectUser, chat }) => {
         <div className="user_info">
           <div className="user_detail">
             <img src={user.avatar || Img} alt="avatar" className="avatar" />
-            <h4>{user.username}</h4>
+            <h4>{user.username || user.name || user.uid}</h4>
             {data?.from !== user1 && data?.unread && (
               <small className="unread">New</small>
             )}
