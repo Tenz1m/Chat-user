@@ -5,7 +5,14 @@ import { signOut } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
 import { AuthContext } from "../context/auth";
 import { useHistory } from "react-router-dom";
-import UserProfile from "./UserProfile";
+import UserProfile from "../pages/UserProfile";
+import Img2 from "../Face.png";
+
+const avatarStyle = {
+  width: "50px",
+  height: "50px",
+};
+
 
 const Navbar = () => {
   const history = useHistory();
@@ -20,14 +27,23 @@ const Navbar = () => {
   };
   return (
     <nav>
-      <h3>
-        <Link to="/">Community Speak Messenger</Link>
-      </h3>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <a href="https://community-speak.vercel.app/" style={{ marginLeft: '10px' }}>
+          <img
+            src={Img2}
+            alt="avatar"
+            style={avatarStyle}
+          />
+        </a>
+        <h3>
+          <Link to="/" style={{ marginLeft: '5px' }}>Community Speak Messenger</Link>
+        </h3>
+      </div>
+
 
       <div className="centered-div">
         {user && <UserProfile user={user} />}
       </div>
-
 
       <div>
         {user ? (
