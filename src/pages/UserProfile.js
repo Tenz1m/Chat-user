@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../image1.jpg";
+import Img1 from "../4.png";
 
 const UserProfile = ({ user }) => {
     const avatarContainerStyle = {
@@ -19,7 +19,7 @@ const UserProfile = ({ user }) => {
     return (
         <div className="user-profile" style={avatarContainerStyle}>
             <img
-                src={user.avatar || Img}
+                src={user.avatar || Img1}
                 alt="avatar"
                 style={avatarStyle}
             />
