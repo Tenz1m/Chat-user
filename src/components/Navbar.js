@@ -11,6 +11,7 @@ import Img2 from "../Face.png";
 const avatarStyle = {
   width: "50px",
   height: "50px",
+  //
 };
 
 
